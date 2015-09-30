@@ -1,0 +1,128 @@
+<?php
+
+namespace Airi\SiteBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Category
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Airi\SiteBundle\Entity\CategoryRepository")
+ */
+class Category
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="catName", type="string", length=255)
+     */
+    private $catName;
+
+    /**
+     * @var \stdClass
+     *
+     * @ORM\Column(name="parent", type="object")
+     */
+    private $parent;
+
+    /**
+     * @var \stdClass
+     *
+     * @ORM\Column(name="createdBy", type="object")
+     */
+    private $createdBy;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set catName
+     *
+     * @param string $catName
+     *
+     * @return Category
+     */
+    public function setCatName($catName)
+    {
+        $this->catName = $catName;
+
+        return $this;
+    }
+
+    /**
+     * Get catName
+     *
+     * @return string
+     */
+    public function getCatName()
+    {
+        return $this->catName;
+    }
+
+    /**
+     * Set parent
+     *
+     * @param \stdClass $parent
+     *
+     * @return Category
+     */
+    public function setParent($parent)
+    {
+        $this->parent = $parent;
+
+        return $this;
+    }
+
+    /**
+     * Get parent
+     *
+     * @return \stdClass
+     */
+    public function getParent()
+    {
+        return $this->parent;
+    }
+
+    /**
+     * Set createdBy
+     *
+     * @param \stdClass $createdBy
+     *
+     * @return Category
+     */
+    public function setCreatedBy($createdBy)
+    {
+        $this->createdBy = $createdBy;
+
+        return $this;
+    }
+
+    /**
+     * Get createdBy
+     *
+     * @return \stdClass
+     */
+    public function getCreatedBy()
+    {
+        return $this->createdBy;
+    }
+}
+

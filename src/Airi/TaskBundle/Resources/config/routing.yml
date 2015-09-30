@@ -1,0 +1,3 @@
+airi_task_homepage:
+    path:     /task/{name}
+    defaults: { _controller: AiriTaskBundle:Default:index }

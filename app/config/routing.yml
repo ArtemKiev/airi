@@ -1,0 +1,15 @@
+airi_user:
+    resource: "@AiriUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+airi_site:
+    resource: "@AiriSiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+airi_task:
+    resource: "@AiriTaskBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

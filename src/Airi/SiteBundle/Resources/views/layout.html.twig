@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+        <title>{% block title %}{% endblock %} - Airi</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
+    {% endblock %}
+</head>
+<body>
+<div id="content">{% block content %}{% endblock %}</div>
+<div id="footer">
+    {% block footer %}
+        &copy; Copyright 2015
+    {% endblock %}
+</div>
+</body>
+</html>

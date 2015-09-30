@@ -1,0 +1,53 @@
+{% extends "AiriSiteBundle::layout.html.twig" %}
+
+{% block title %}Добавить сайт{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        input[type="text"] {
+            height: 20px;
+            width: 220px;
+            padding: 4px 6px;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+<form method="post">
+    <table class="table table-striped">
+        <tr>
+            <td>Домен:</td>
+            <td><input type="text" name="domain"/></td>
+        </tr>
+        <tr>
+            <td>Менеджер по поддержке:</td>
+            <td>
+                <select name="supportManager">
+                    {% for id, user in users %}
+                        <option value="{{ id }}">{{ user }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Менеджер по продажам:</td>
+            <td>
+                <select name="productManager">
+                    {% for id, user in users %}
+                        <option value="{{ id }}">{{ user }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Оптимизатор:</td>
+            <td>
+                <select name="optimizer">
+                    {% for id, user in users %}
+                        <option value="{{ id }}">{{ user }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+    </table>
+</form>
+{% endblock %}

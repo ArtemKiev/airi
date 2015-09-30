@@ -1,0 +1,6 @@
+airi_site_homepage:
+    path:     /site/view/{id}
+    defaults: { _controller: AiriSiteBundle:Default:index }
+airi_site_create:
+    path:     /site/create
+    defaults: { _controller: AiriSiteBundle:Default:create }
